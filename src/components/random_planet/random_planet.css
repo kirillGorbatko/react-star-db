@@ -1,0 +1,150 @@
+.random_planet__body{
+	position: relative;
+	
+	max-width: 100%;	
+
+	border-radius: 15px;
+	background-color: #141414;
+}
+
+.random_planet__image{
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+.random_planet__image img{
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	object-fit: contain;
+}
+
+.random_planet__title{
+	color: #fff;
+}
+
+.random_planet__list{ 
+	display: inline-flex;
+	flex-direction: column;
+}
+
+.random_planet__item{
+	display: flex;
+	align-items: center;
+	width: 100%;
+
+	padding: 10px 5px;
+	border-bottom: 2px solid rgb(9, 147, 172);
+}
+
+.random_planet__item:not(:last-child){
+	margin-bottom: 10px;
+}
+
+.random_planet__label{
+	color: rgb(9, 147, 172);
+}
+
+.random_planet__label::after{
+	content:':';
+	display: inline-block;
+}
+
+.random_planet__value{
+	color: #fff;
+}
+
+@media (min-width: 767px) {
+	.random_planet{
+		padding: 25px 0;
+	}
+	
+	.random_planet__body{
+		display: flex;
+		margin-right: -20px;
+		padding: 20px;
+	}
+
+	.random_planet__column {
+		padding-right: 20px;
+	}
+	
+	.random_planet__column:first-child {
+		width: 35%;
+	}
+	
+	.random_planet__column:nth-child(2) {
+		width: 65%;
+	}
+
+	.random_planet__title{
+		font-size: 46px;
+	}
+
+	.random_planet__title:not(:last-child){
+		margin-bottom: 25px;
+	}
+
+	.random_planet__list{ 
+		padding-left: 20px;
+		align-items: flex-start;
+	}
+
+	.random_planet__item{ 
+		min-width: 310px;
+		font-size: 21px;
+	}
+
+	.random_planet__label{
+		width: 180px;
+	}
+}
+
+@media (max-width: 768px) {
+	.random_planet{
+		padding: 15px 0;
+	}
+
+	.random_planet__body{
+		padding: 15px;
+	}
+
+	.random_planet__column:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	.random_planet__column{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.random_planet__image{
+		max-width: 400px;
+	}
+
+	.random_planet__title{
+		font-size: 26px;
+		text-align: center;
+	}
+
+	.random_planet__title:not(:last-child){
+		margin-bottom: 15px;
+	}
+
+	.random_planet__list{ 
+		padding-left: 10px;
+		align-items: center;
+	}
+
+	.random_planet__item{
+		min-width: 260px;
+		font-size: 18px;
+	}
+
+	.random_planet__label{
+		width: 139px;
+	}
+	
+}
