@@ -25,12 +25,12 @@ export default class App extends React.Component {
 						<Header />
 						<div className='wrapper__in'>
 
-							<RandomPlanet/>
-							
-							<PeoplePage/>
-							<PlanetsPage/>
-							<StarshipsPage/>
-					
+							<RandomPlanet />
+
+							<PeoplePage />
+							<PlanetsPage />
+							<StarshipsPage />
+
 						</div>
 					</div>
 				</SwapiServiceProvider>

@@ -35,7 +35,7 @@ const ItemList = (props) => {
 }
 
 ItemList.defaultProps = {
-	onItemSelected: () => {}
+	onItemSelected: () => { }
 }
 
 ItemList.propTypes = {

@@ -39,13 +39,13 @@ const withData = (View, getData) => {
 			const errorMessage = error ? <ErrorIndicator /> : null;
 			const loader = loading ? <Loader /> : null;
 
-			return <View 
-							{...this.props}
-							data={data} 
-							hasData={hasData} 
-							errorMessage={errorMessage} 
-							loader={loader} 
-						/>
+			return <View
+				{...this.props}
+				data={data}
+				hasData={hasData}
+				errorMessage={errorMessage}
+				loader={loader}
+			/>
 		};
 	}
 };
