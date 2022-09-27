@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import ItemList from '../item_list/item_list';
 import ItemDetails from '../item_details/item_details';
@@ -11,7 +11,7 @@ import './people_page.css'
 
 
 
-export default class PeoplePage extends Component {
+export default class PeoplePage extends React.Component {
 	swapiService = new SwapiService();
 
 	state = {

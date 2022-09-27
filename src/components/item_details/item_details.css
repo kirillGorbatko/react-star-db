@@ -2,6 +2,9 @@
 	background-color: #141414;
 	border-radius: 15px;
 	height: 100%;
+
+	max-width: 1280px;
+	margin: 0 auto;
 }
 
 .item_details__message{

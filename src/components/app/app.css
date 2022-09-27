@@ -25,6 +25,13 @@
 	display: block;
 }
 
+.wrapper__in h2 {
+	color: #fff;
+	background-color: #141414;
+	border-radius: 15px;
+	text-align: center;
+}
+
 .wrapper_button{
 	display: flex;
 	gap: 20px;
@@ -67,6 +74,12 @@
 	.wrapper_button{
 		justify-content: center;
 	}
+
+	.wrapper__in h2 {
+		font-size: 34px;
+
+		padding: 30px 0;
+	}
 }
 
 @media (max-width: 768px) {
@@ -78,6 +91,11 @@
 	.wrapper_button{
 		flex-direction: column;
 		align-items: center;
+	}
+
+	.wrapper__in h2 {
+		font-size: 24px;
+		padding: 15px 0;
 	}
 }
 

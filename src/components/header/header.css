@@ -10,6 +10,14 @@
 .header__logo{
 	font-family: 'Arial';
 	color: #fff;
+
+	text-decoration: none;
+	transition: color 0.3s ease;
+	will-change: color;
+}
+
+.header__logo:hover {
+	color:rgb(9, 147, 172);
 }
 
 .header__list{

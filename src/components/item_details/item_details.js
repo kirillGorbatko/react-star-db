@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SwapiService from '../../services/swapi';
 import Loader from '../loader/loader';
 import ErrorIndicator from '../error_indicator/error_indicator';
