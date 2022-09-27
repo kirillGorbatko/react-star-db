@@ -1,0 +1,166 @@
+.item_details {
+	background-color: #141414;
+	border-radius: 15px;
+	height: 100%;
+}
+
+.item_details__message{
+	color: #fff;
+	font-weight: 700;
+	text-align: center;
+
+	padding: 20px 0;
+}
+
+.item_details__image {
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+.item_details__image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	object-fit: contain;
+}
+
+.item_details__title {
+	color: #fff;
+}
+
+.item_details__list {
+	display: flex;
+	flex-direction: column;
+}
+
+.item_details__item {
+	display: flex;
+	align-items: center;
+
+	padding: 5px;
+	border-bottom: 2px solid rgb(9, 147, 172);
+}
+
+.item_details__wrap{
+	display: flex;
+	justify-content: center;
+	padding-top: 10px;
+}
+
+.item_details__item:not(:last-child){
+	margin-bottom: 5px;
+}
+
+.item_details__label {
+	color: rgb(9, 147, 172);
+}
+
+.item_details__label::after{
+	content:':';
+	display: inline-block;
+}
+
+.item_details__value {
+	color: #fff;
+}
+
+@media (min-width: 767px) {
+	.item_details__row {
+		display: flex;
+	
+		margin-right: -15px;
+		padding: 20px;
+	}
+	
+	.item_details__column {
+		padding-right: 15px;
+	}
+	
+	.item_details__column:first-child {
+		width: 40%;
+	}
+	
+	.item_details__column:nth-child(2) {
+		width: 60%;
+	}
+
+	.item_details__title {
+		font-size: 32px;
+	}
+
+	.item_details__title:not(:last-child){
+		margin-bottom: 20px;
+	}
+
+	.item_details__list {
+		padding-left: 15px;
+		align-items: flex-start;
+	}
+
+	.item_details__item {
+		min-width: 240px;
+
+		font-size: 21px;
+	}
+
+	.item_details__wrap{
+		min-width: 240px;
+	}
+
+	.item_details__label {
+		width: 120px;
+	}
+
+	.item_details__message{
+		font-size: 21px;
+	}
+}
+
+@media (max-width: 768px) {
+	.item_details__row {
+		padding: 15px;
+	}
+
+	.item_details__column:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	.item_details__image{
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.item_details__title {
+		font-size: 24px;
+		text-align: center;
+	}
+
+	.item_details__title:not(:last-child){
+		margin-bottom: 10px;
+	}
+
+	.item_details__list {
+		padding-left: 10px;
+		align-items: center;
+	}
+
+	.item_details__item {
+		min-width: 260px;
+
+		font-size: 18px;
+	}
+
+	.item_details__wrap{
+		min-width: 260px;
+	}
+	
+	.item_details__label {
+		width: 120px;
+	}
+
+	.item_details__message{
+		font-size: 18px;
+	}
+}

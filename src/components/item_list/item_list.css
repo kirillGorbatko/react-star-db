@@ -1,0 +1,48 @@
+.item_list {
+	background-color: #141414;
+	border-radius: 15px;
+	overflow: hidden;
+
+	border: 0.2rem solid rgba(9, 147, 172 ,0.4);
+	padding: 0;
+}
+
+.item_list__item {
+	padding: 20px;
+
+	color: #fff;
+	border-radius: 15px;
+	cursor: pointer;
+
+	transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.item_list__item:hover {
+	background-color: rgba(9, 147, 172);
+	color: #000;
+}
+
+.item_list__item:not(:last-child) {
+	border-bottom: 1px solid rgba(9, 147, 172 ,0.4);
+}
+
+@media (min-width: 767px) {
+	.item_list__item {
+		font-size: 21px;
+	}
+
+	.item_list__item span {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 768px) {
+	.item_list__item {
+		font-size: 18px;
+	}
+
+	
+	.item_list__item span {
+		font-size: 14px;	
+	}
+}
