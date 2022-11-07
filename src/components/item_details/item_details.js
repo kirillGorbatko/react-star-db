@@ -84,7 +84,7 @@ export default class ItemDetails extends React.Component {
 }
 
 const ItemView = ({ item, image, propsChildren }) => {
-	const { name, gender, birthYear, eyeColor, skinColor } = item;
+	const { name } = item;
 
 	return (
 		<div className='item_details__row'>

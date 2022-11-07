@@ -15,11 +15,24 @@ const ItemList = (props) => {
 	const items = hasData ? data.map((item) => {
 		const { id } = item;
 		const label = renderLabel(item);
+		
 
 		return (
 			<li className='item_list__item'
 				key={id}
-				onClick={() => onItemSelected(id)}>
+				onClick={(e) => {
+					onItemSelected(id);
+					const $element = e.target;
+					const activeStateClass = 'item_list__item--active_state';
+
+					if ($element.classList.contains(activeStateClass)) return;
+					
+					const $activeElements = document.querySelectorAll(`.${activeStateClass}`);
+
+					$activeElements.forEach($activeEl => $activeEl.classList.remove(activeStateClass));
+					
+					e.target.classList.add(activeStateClass);
+				}}>
 				{label}
 			</li>
 		);

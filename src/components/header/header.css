@@ -16,7 +16,8 @@
 	will-change: color;
 }
 
-.header__logo:hover {
+.header__logo:hover,
+.header__logo.header__logo--active_state {
 	color:rgb(9, 147, 172);
 }
 
@@ -38,7 +39,8 @@
 	transition: color 0.3s ease 0s;
 }
 
-.header__link:hover{
+.header__link:hover,
+.header__link.header__link--active_state {
 	color: #fff;
 }
 

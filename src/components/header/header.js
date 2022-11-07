@@ -1,24 +1,47 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './header.css'
 
 const Header = () => {
+	const nav = [
+		{
+			page_path: '/people',
+			page_title: 'People',
+		},
+		{
+			page_path: '/planets',
+			page_title: 'Planets',
+		},
+		{
+			page_path: '/starships',
+			page_title: 'Starships',
+		},
+	];
+
 	return (
 		<header className='header'>
 			<div className='container'>
 				<div className='header__row'>
-					<Link to="/" className='header__logo'>Star DB</Link>
+					<NavLink 
+						end to='/'
+						className={
+							({ isActive }) => (isActive ? 'header__logo header__logo--active_state' : 'header__logo')
+						} 
+					>Star DB</NavLink>
 					<ul className='header__list'>
-						<li className='header__item'>
-							<Link to="/people" className='header__link'>People</Link>
-						</li>
-						<li className='header__item'>
-							<Link to="/planets" className='header__link'>Planets</Link>
-						</li>
-						<li className='header__item'>
-							<Link to="/starships" className='header__link'>Starships</Link>
-						</li>
+							{
+								nav.map((item, index) => (
+									<li className='header__item' key={index}>
+										<NavLink 
+											to={item.page_path}
+											className={
+												({ isActive }) => (isActive ? 'header__link header__link--active_state' : 'header__link')
+											}
+										>{item.page_title}</NavLink>
+									</li>
+								))
+							}
 					</ul>
 				</div>
 			</div>

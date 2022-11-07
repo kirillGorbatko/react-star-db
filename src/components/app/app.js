@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 // components
 import Header from '../header/header';
@@ -30,29 +30,26 @@ export default class App extends React.Component {
 							<div className='wrapper__in'>
 								<RandomPlanet />
 								<Routes>
-									<Route path="/people" element={
+									<Route path="/people/*" element={
 										<section>
 											<TitleSection title="People" />
 											<PeoplePage />
 										</section>
 									} />
-									<Route path="/people/:id" element={<DetailPage component="people" />} />
 
-									<Route path="/planets" element={
+									<Route path="/planets/*" element={
 										<section>
 											<TitleSection title="Planets" />
 											<PlanetsPage />
 										</section>
 									} />
-									<Route path="/planets/:id" element={<DetailPage component="planets" />} />
 
-									<Route path="/starships" element={
+									<Route path="/starships/*" element={
 										<section>
 											<TitleSection title="Starships" />
 											<StarshipsPage />
 										</section>
 									} />
-									<Route path="/starships/:id" element={<DetailPage component="starships" />} />
 
 									<Route path="*" element={<TitleSection title="Welcome to StarDB" />} />
 								</Routes>
@@ -83,5 +80,7 @@ const DetailPage = (props) => {
 			return <PlanetDetails itemId={id} />
 		case 'starships':
 			return <StarshipDetails itemId={id} />
+		default:
+				return null;
 	}
 };
