@@ -64,6 +64,50 @@
 	background-color: rgb(9, 147, 172);
 }
 
+.content {
+	background-color: #141414;
+	border-radius: 15px;
+
+	color: #fff;
+	text-align: center;
+}
+
+.content > *:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.content h3 {
+	font-size: 28px;
+	letter-spacing: 0.01em;
+}
+
+.content p {
+	font-size: 18px;
+}
+
+.content .button {
+	height: 48px;
+
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 25px;
+
+	font-size: 18px;
+	letter-spacing: 0.01em;
+
+	border-radius: 5px;
+	background-color: rgb(6, 68, 6);
+	color: #fff;
+
+	cursor: pointer;
+	transition: background-color .3s ease;
+	will-change: background-color;
+}
+
+.content .button:hover {
+	background-color: rgb(19, 107, 19);
+}
+
 
 @media (min-width: 767px) {
 	.wrapper_button__in{
@@ -80,6 +124,11 @@
 
 		padding: 30px 0;
 	}
+
+	.content {
+		margin-top: 25px;
+		padding: 25px 0;
+	}
 }
 
 @media (max-width: 768px) {
@@ -95,6 +144,11 @@
 
 	.wrapper__in h2 {
 		font-size: 24px;
+		padding: 15px 0;
+	}
+
+	.content {
+		margin-top: 15px;
 		padding: 15px 0;
 	}
 }

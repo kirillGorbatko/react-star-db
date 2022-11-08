@@ -17,6 +17,16 @@ const Header = () => {
 			page_path: '/starships',
 			page_title: 'Starships',
 		},
+		{
+			page_path: '/login',
+			page_title: 'Login',
+			mod: 'header__item--login_mod',
+		},
+		{
+			page_path: '/secret',
+			page_title: 'Secret',
+			mod: 'header__item--secret_mod',
+		},
 	];
 
 	return (
@@ -32,7 +42,7 @@ const Header = () => {
 					<ul className='header__list'>
 							{
 								nav.map((item, index) => (
-									<li className='header__item' key={index}>
+									<li className={`header__item ${item.mod ? item.mod : ''}`} key={index}>
 										<NavLink 
 											to={item.page_path}
 											className={
