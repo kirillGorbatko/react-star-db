@@ -49,7 +49,8 @@ export default class App extends React.Component {
 							<div className='wrapper__in'>
 								<RandomPlanet />
 								<Routes>
-									<Route path="*" element={<TitleSection title="Welcome to StarDB" />} />
+									<Route path="/" element={<TitleSection title="Welcome to StarDB" />} />
+									<Route path="*" element={<TitleSection title="Error 404. Page not found." />} />
 
 									<Route path="/people/*" element={
 										<section>
